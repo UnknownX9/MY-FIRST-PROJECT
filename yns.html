@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title> my Restaurant</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial;
+  background:#111;
+  color:white;
+}
+
+header{
+  display:flex;
+  justify-content:space-between;
+  padding:20px;
+  background:#000;
+  position:sticky;
+  top:0;
+}
+
+nav a{
+  color:white;
+  margin:0 10px;
+  text-decoration:none;
+}
+
+.hero{
+  text-align:center;
+  padding:100px 20px;
+  background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+  url('https://images.unsplash.com/photo-1504674900247-0877df9cc836');
+  background-size:cover;
+}
+
+.hero h2{
+  font-size:40px;
+}
+
+button{
+  padding:10px 20px;
+  border:none;
+  background:red;
+  color:white;
+  cursor:pointer;
+  border-radius:5px;
+}
+
+.menu{
+  padding:40px;
+  text-align:center;
+}
+
+.items{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.card{
+  background:#222;
+  padding:20px;
+  width:150px;
+  border-radius:10px;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:scale(1.1);
+}
+
+.about,.contact{
+  text-align:center;
+  padding:40px;
+}
+
+footer{
+  text-align:center;
+  padding:20px;
+  background:#000;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>🍔 Restaurant's lotfiii</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#menu">Menu</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="home" class="hero">
+  <h2>Best Food in Lotfi 🔥</h2>
+  <p>Fresh & Delicious meals every day</p>
+  <button onclick="orderNow()">Order Now</button>
+</section>
+
+<section id="menu" class="menu">
+  <h2>Our Menu</h2>
+
+  <div class="items">
+    <div class="card">
+      <h3>Pizza</h3>
+      <p>Cheese & Tomato</p>
+      <span>$10</span>
+    </div>
+
+    <div class="card">
+      <h3>Burger</h3>
+      <p>Beef & Cheese</p>
+      <span>$8</span>
+    </div>
+
+    <div class="card">
+      <h3>Pasta</h3>
+      <p>Italian Style</p>
+      <span>$12</span>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <h2 style="text-align:center;">About Us</h2>
+  <p style="text-align:center; padding:0 20px;">
+    We serve fresh food with high quality ingredients and modern style.
+  </p>
+</section>
+
+<section id="contact">
+  <h2 style="text-align:center;">Contact</h2>
+  <p style="text-align:center;">restaurant@gmail.com</p>
+  <p style="text-align:center;">+212 600 000 000</p>
+</section>
+
+<footer>
+  © 2026 My Restaurant
+</footer>
+
+<script>
+function orderNow(){
+  alert("🍔 Order placed successfully!");
+}
+</script>
+
+</body>
+</html>
