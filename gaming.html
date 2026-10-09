@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UNKNOW X Esports</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#090909;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Background */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at 20% 20%, rgba(255,0,0,.2), transparent 30%),
+    radial-gradient(circle at 80% 60%, rgba(255,0,0,.15), transparent 30%);
+    animation:move 8s infinite alternate;
+    z-index:-1;
+}
+
+@keyframes move{
+    from{
+        transform:translateY(-20px);
+    }
+    to{
+        transform:translateY(20px);
+    }
+}
+
+/* Navbar */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 8%;
+    position:sticky;
+    top:0;
+    background:rgba(0,0,0,.7);
+    backdrop-filter:blur(10px);
+}
+
+.logo{
+    font-size:32px;
+    font-weight:bold;
+    color:#ff2d2d;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ff2d2d;
+}
+
+/* Hero */
+.hero{
+    min-height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:70px;
+    text-transform:uppercase;
+    text-shadow:0 0 25px red;
+}
+
+.hero p{
+    max-width:700px;
+    color:#cfcfcf;
+    margin:25px 0;
+    line-height:1.8;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 35px;
+    background:#ff2d2d;
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:bold;
+    box-shadow:0 0 20px red;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+}
+
+/* Cards */
+section{
+    padding:90px 8%;
+}
+
+.title{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:50px;
+}
+
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+}
+
+.card{
+    width:320px;
+    padding:35px;
+    background:#111;
+    border:1px solid #222;
+    border-radius:20px;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    border-color:red;
+    box-shadow:0 0 25px rgba(255,0,0,.4);
+}
+
+.card h3{
+    color:#ff2d2d;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#ccc;
+    line-height:1.7;
+}
+
+/* Pricing */
+.pricing{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+}
+
+.price-box{
+    width:300px;
+    background:#111;
+    padding:40px;
+    text-align:center;
+    border-radius:20px;
+}
+
+.price-box h3{
+    color:#ff2d2d;
+}
+
+.price{
+    font-size:50px;
+    margin:20px 0;
+}
+
+/* Testimonials */
+.testimonials{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+}
+
+.testimonial{
+    width:320px;
+    background:#111;
+    padding:30px;
+    border-radius:20px;
+}
+
+.stars{
+    color:gold;
+    margin-bottom:15px;
+}
+
+/* Contact */
+form{
+    max-width:600px;
+    margin:auto;
+}
+
+input,textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:20px;
+    border:none;
+    border-radius:10px;
+    background:#151515;
+    color:white;
+}
+
+textarea{
+    height:150px;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    background:#ff2d2d;
+    border:none;
+    color:white;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:18px;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:30px;
+    color:#999;
+    border-top:1px solid #222;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:45px;
+}
+
+nav{
+    flex-direction:column;
+    gap:20px;
+}
+
+nav ul{
+    flex-direction:column;
+    text-align:center;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">UNKNOW X</div>
+
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <h1>UNKNOW X ESPORTS</h1>
+
+    <p>
+        Join the future of competitive gaming.
+        Premium esports experiences, elite players,
+        and unforgettable moments.
+    </p>
+
+    <a href="#" class="btn">Join Now</a>
+</section>
+
+<section>
+    <h2 class="title">Why Choose Us</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Elite Team</h3>
+            <p>Professional esports players ready to dominate tournaments.</p>
+        </div>
+
+        <div class="card">
+            <h3>Premium Coaching</h3>
+            <p>Improve your skills with our gaming experts.</p>
+        </div>
+
+        <div class="card">
+            <h3>Global Community</h3>
+            <p>Connect with gamers from around the world.</p>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <h2 class="title">Pricing</h2>
+
+    <div class="pricing">
+
+        <div class="price-box">
+            <h3>Basic</h3>
+            <div class="price">$9</div>
+            <p>Community Access</p>
+        </div>
+
+        <div class="price-box">
+            <h3>Pro</h3>
+            <div class="price">$29</div>
+            <p>Coaching + Events</p>
+        </div>
+
+        <div class="price-box">
+            <h3>Elite</h3>
+            <div class="price">$59</div>
+            <p>VIP Membership</p>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <h2 class="title">Testimonials</h2>
+
+    <div class="testimonials">
+
+        <div class="testimonial">
+            <div class="stars">★★★★★</div>
+            <p>"Best gaming community I've ever joined."</p>
+            <strong>- Alex</strong>
+        </div>
+
+        <div class="testimonial">
+            <div class="stars">★★★★★</div>
+            <p>"Professional coaching and amazing support."</p>
+            <strong>- David</strong>
+        </div>
+
+        <div class="testimonial">
+            <div class="stars">★★★★★</div>
+            <p>"I improved my rank faster than ever."</p>
+            <strong>- Sarah</strong>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <h2 class="title">Contact Us</h2>
+
+    <form>
+        <input type="text" placeholder="Your Name" required>
+
+        <input type="email" placeholder="Your Email" required>
+
+        <textarea placeholder="Your Message"></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    © 2026 UNKNOW X ESPORTS. All Rights Reserved.
+</footer>
+
+</body>
+</html>
